@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(110deg, rgb(217, 82, 45), rgb(136, 55, 79));
+            height: 100vh;
+            overflow: hidden;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  
+            width: 300px;
+            padding: 40px;
+            background: rgba(147, 97, 97, 0.8);
+            border: 2px solid rgb(166, 74, 132);
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            align-items: center;
+
+        }
+
+        .container h1 {
+            text-align: center;
+            color: rgb(39, 37, 37);
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(39, 37, 37);
+        }
+        .container form{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .container form .form-group{
+            position: relative;
+            padding : 10px 0;
+        }
+        .container form .form-group input{
+            width: 100%;
+            font-size: 16px;
+            color: rgb(239, 231, 231);
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid #a79898;
+            outline: none;
+            background: transparent;
+        }
+        .container form .form-group label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #a79898;
+            transition: .5s;
+        }
+        .container form .form-group input:focus ~ label,
+        .container form .form-group input:valid ~ label{
+            top: -20px;
+            left: 0;
+            color: #a79898;
+            font-size: 12px;
+        }
+        .container form .forget{
+            text-align: center;
+            color: #313030;
+            font-size: 14px;
+            text-decoration: none;
+
+        }
+        .container form .forget:hover{
+            color: #fff;
+            font-size: 16px;
+        }
+        .container form .btn{
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: linear-gradient(110deg, rgb(217, 82, 45), rgb(136, 55, 79));
+            border-radius: 10px;
+        }
+        .container form .signup{
+            
+            margin-top: 20px;
+            text-align: center;
+            color: #a79898;
+            font-size: 14px;
+        }
+        .container form .signup a{
+            font-weight: bold;
+            font-size: 14px;
+            color: #a79898;
+            text-decoration: none;
+        }
+        .container form .signup a:hover{
+            font-size: 16px;
+            color: #fff;
+        }
+        .container form .social{
+            margin-top: 20px;
+            text-align: center;
+            color: #a79898;
+            font-size: 14px;
+        }
+        .container form .social a{
+            font-weight: bold;
+            font-size: 14px;
+            color: #a79898;
+            text-decoration: none;
+        }
+        .container form .social img:hover{
+            height: 35px;
+            width: 35px;
+
+        }
+        .container form .social img{
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="login">
+            Login
+        </h1>
+
+        <!-- make a horizontal line -->
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Username" required>
+            </div>
+            <!-- <div class="form-group">
+                <input type="text" name="" placeholder="Email" required>
+            </div> -->
+            <div class="form-group">
+                <input type="password" name="" placeholder="Password" required>
+            </div>
+            <a href="#" class="forget">Forget Password</a>
+
+            <button class="btn">Login</button>
+            
+            <div class="signup">
+                Don't have a account?
+                <a href="#">Signup</a>
+            </div>
+            <!-- or signup using google-->
+            <div class="social">
+                <p>or login using</p>
+                <a href="#"><img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="google"></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/000000/github--v1.png" alt="github"></a>
+                
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
